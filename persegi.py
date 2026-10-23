@@ -1,8 +1,10 @@
-sisi = int(input("masukan sisi persegi: "))
-pilihan = (input("pilih luas/keliling: "))
-sisi_persegi = sisi*sisi
-keliling_persegi = 4*sisi
+sisi = int(input("Masukkan sisi persegi: "))
+pilihan = input("pilih luas/keliling: ")
 
-dict = {"luas": sisi_persegi, "keliling": keliling_persegi}
-print(dict[pilihan])
+luas = sisi * sisi
+keliling = 4 * sisi
 
+hasil = {"luas": luas, "keliling": keliling}
+pesan_error = 'Oops, hanya bisa input "luas" atau "keliling". Periksa kembali input-an Anda'
+
+print(hasil.get(pilihan, pesan_error))
